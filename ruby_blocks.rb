@@ -1,4 +1,3 @@
-puts "Hello Blocks ^_^"
 def test
   puts "in the method"
   yield
@@ -15,3 +14,19 @@ def test
 end
 
 test {|i,j| puts "Block #{i} #{j}"}
+
+BEGIN{
+  puts "Hello Blocks ^_^"
+}
+
+BEGIN{
+  puts "Again : Hello Blocks ^_^"
+}
+
+END{
+  puts "Again : Bye Bye Blocks"
+}
+
+END{
+  puts "Bye Bye Blocks"
+}
